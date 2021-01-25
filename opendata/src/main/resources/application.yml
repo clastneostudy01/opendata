@@ -1,20 +1,0 @@
-# 설정은 yml에 저장한다.
-server:
-  port: 8080
-  
-spring:
-  servlet:
-  #multipart 파일처리 조건
-    multipart:
-      max-file-size: -1      max-request-size: -1
-  datasource:
-        #jdbc:mysql://엔드포인트/데이터베이스?옵션...      url: jdbc:mysql://mysql-1.cokmyyfqxw9n.ap-northeast-2.rds.amazonaws.com/opendata?useUnicode=true&characterEncoding=utf-8
-    username: admin
-    password: password123!
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:    show-sql: true      # 데이터를 처리할 대 SQL문을 보여줌
-    generate-ddl: true  # 클래스 정의에 따른 테이블 및 데이터베이스 객체 생성
-
-# ddl = data definition langueage
-# : create, alter, drop 수행해주는 것
-# 실시간으로 DB가 변화하기 때문에 점검이나 개발할때에만 사용
